@@ -1,0 +1,39 @@
+body {
+  height: 300vh;
+}
+
+#box {
+  position: absolute;
+  top: 110vh;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  place-content: center;
+  background-color: hsl(0 100% 50% / 1);
+  transition: background-color 1s;
+}
+
+.vertical {
+  color: white;
+  font: 32px 'Arial';
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+  background: hsl(211 100% 50% / 0.8);
+  color: #fff;
+  padding: 1rem;
+}
+
+body:before {
+  content: 'scroll down to see when the browser detects the intersection';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: hsl(0 90% 50% / 0.8);
+  padding: 1rem;
+}

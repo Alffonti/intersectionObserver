@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 25% minmax(min-content, 1fr);
+  grid-template-rows: auto minmax(min-content, 1fr);
+}
+
+header {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  text-align: center;
+  color: hsl(210, 100%, 96%);
+  background-color: hsl(210, 100%, 20%);
+}
+
+aside {
+  position: relative;
+  grid-column: 1;
+  grid-row: 2;
+  background-color: hsl(210, 100%, 93%);
+  padding: 5px 10px;
+}
+
+aside ul {
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  padding-left: 0;
+}
+
+aside ul li {
+  list-style: none;
+  margin-block: 2rem;
+}
+
+aside ul li a {
+  font-size: 1.5rem;
+  color: hsl(210, 100%, 50%);
+  text-decoration: none;
+}
+
+main {
+  grid-column: 2;
+  grid-row: 2;
+  margin-left: 16px;
+  font-size: 16px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+article {
+  background-color: hsl(0, 0%, 90%);
+  padding: 2rem;
+  line-height: 1.8;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+article button {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: hsl(0, 0%, 60%);
+  }
+}
+
+.ad {
+  padding: 2rem;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.ad h2 {
+  margin-top: 0;
+}
+
+.ad div {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.notificationContainer {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 30vw;
+  right: 1rem;
+  display: grid;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.notificationContainer > p {
+  position: relative;
+  background: hsl(211 100% 50% / 0.9);
+  color: #fff;
+  padding: 1rem;
+  padding-right: 2rem;
+  margin: 0;
+  line-height: 1.5;
+  display: none;
+}
